@@ -17,7 +17,7 @@ export const getGenres = createAsyncThunk("flixxit/genres", async () => {
   const {
     data: { genres },
   } = await axios.get(
-    "https://api.themoviedb.org/3/genre/movie/list?api_key=5b8d780fbc97dd274a59f7a907791512"
+    "https://api.themoviedb.org/3/genre/movie/list?api_key=2c4dd01961c8c9e79541081da48e7615"
   );
   console.log(genres)
   return genres;
@@ -60,13 +60,13 @@ export const fetchDataByGenre = createAsyncThunk(
     if (genre.length <= 2) {
 
       return getRawData(
-        `https://api.themoviedb.org/3/discover/${type}?api_key=5b8d780fbc97dd274a59f7a907791512&with_genres=${genre}`,
+        `https://api.themoviedb.org/3/discover/${type}?api_key=2c4dd01961c8c9e79541081da48e7615&with_genres=${genre}`,
         genres
       );
     }
     else {
       return getRawData(
-        `https://api.themoviedb.org/3/search/movie?query=${genre}&api_key=5b8d780fbc97dd274a59f7a907791512`,
+        `https://api.themoviedb.org/3/search/movie?query=${genre}&api_key=2c4dd01961c8c9e79541081da48e7615`,
         genres
       );
     }
@@ -96,7 +96,7 @@ export const fetchSearchMovies = createAsyncThunk(
     } = thunkAPI.getState();
     console.log(genre)
     return getRawData(
-      `https://api.themoviedb.org/3/search/movie?query=${genre}&api_key=5b8d780fbc97dd274a59f7a907791512`,
+      `https://api.themoviedb.org/3/search/movie?query=${genre}&api_key=2c4dd01961c8c9e79541081da48e7615`,
       genres
     )
   }

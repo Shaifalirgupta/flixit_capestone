@@ -23,7 +23,7 @@ function Signup() {
       await createUserWithEmailAndPassword(firebaseAuth, email, password);
     } catch (error) {
       console.log(error);
-      if (error.code == "auth/email-already-in-use") {
+      if (error.code === "auth/email-already-in-use") {
         toast("The email address is already in use");
       }
     }

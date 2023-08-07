@@ -11,7 +11,7 @@ import { fetchDataByGenre } from "../store";
 export default function Navbar({ isScrolled, type }) {
   const [showSearch, setShowSearch] = useState(false);
   const [inputHover, setInputHover] = useState(false);
-  const [search, setSearch] = useState()
+  
   const genres = useSelector((state) => state.flixxit.genres);
   const genresLoaded = useSelector((state) => state.flixxit.genresLoaded);
   const links = [
