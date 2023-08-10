@@ -1,4 +1,4 @@
-Description
+Description:-
 Flixxit is a cutting-edge web application that seeks to provide users with an immersive and feature-rich streaming experience, akin to popular OTT (Over-The-Top) platforms like Netflix, Prime Video, and AppleTV+ etc
 
 Installation
