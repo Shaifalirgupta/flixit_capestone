@@ -22,13 +22,13 @@ function MoviePage() {
 
   useEffect(() => {
     dispatch(getGenres());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     if (genresLoaded) {
       dispatch(fetchMovies({ genres, type: "movie" }));
     }
-  }, [genresLoaded]);
+  }, [dispatch, genres, genresLoaded]);
 
   const [user, setUser] = useState(undefined);
 

@@ -22,13 +22,13 @@ function TVShows() {
 
   useEffect(() => {
     if (!genres.length) dispatch(getGenres());
-  }, []);
+  }, [dispatch, genres.length]);
 
   useEffect(() => {
     if (genresLoaded) {
       dispatch(fetchMovies({ genres, type: "tv" }));
     }
-  }, [genresLoaded]);
+  }, [dispatch, genres, genresLoaded]);
 
   const [user, setUser] = useState(undefined);
 
